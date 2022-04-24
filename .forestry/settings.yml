@@ -4,6 +4,31 @@ auto_deploy: false
 admin_path: 
 webhook_url: 
 sections: 
+- type: document
+  path: src/content/pages/index.md
+  label: Home
+  templates:
+  - home
+- type: document
+  path: src/content/pages/contact.md
+  label: Contact
+  templates:
+  - contact
+- type: directory
+  path: src/pages
+  label: Pages
+  create: all
+  match: "*"
+  exclude: "{index.md,contact.md}"
+  templates:
+  - page
+- type: directory
+  path: src/content/posts
+  label: Posts
+  create: all
+  match: "**/*"
+  templates:
+  - post
 upload_dir: uploads
 public_path: "/uploads"
 front_matter_path: ''
