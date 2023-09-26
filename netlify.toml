@@ -10,3 +10,10 @@
 
 [[plugins]]
   package = "@netlify/plugin-gatsby"
+
+  
+[[redirects]]
+  from = "https://nikitajain.in/portfolio"
+  to = "https://www.playbook.com/s/nikita-jain/portfolio"
+  status = 301
+  force = true
